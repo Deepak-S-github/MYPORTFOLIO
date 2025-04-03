@@ -6,12 +6,19 @@
     <title>Deepak's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="loading-screen">
+            <div class="spinner"></div>
+        
+        <h1 class="loading-text">Loading<span class="dots"></span></h1>
+    </div>    
     <header>
         <div class="header-container">
-            <h1>Deepak</h1>
-            <p>Programmer | Gamer | Full-Stack Developer</p>
+            <h1>Deepak S</h1>
+            <p><i class="fas fa-code"></i> AI Enthusiast | Full-Stack Developer | Cloud Learner</p>
         </div>
     </header>
 
@@ -19,62 +26,92 @@
         <div class="about-container">
             <img src="your-image.jpg" alt="Deepak">
             <div class="bio">
-                <h2>About Me</h2>
-                <p>I am a skilled programmer, avid gamer, and full-stack developer with a passion for creating dynamic and responsive web applications. With a strong foundation in both front-end and back-end technologies, I strive to build seamless and efficient solutions.</p>
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <p>I am a passionate AI and Full-Stack developer currently pursuing a degree in Artificial Intelligence & Data Science at Velammal Engineering College. My expertise includes front-end and back-end development, along with cloud computing. I have a strong foundation in programming and enjoy working on innovative projects that integrate AI with web technologies. Always eager to explore emerging technologies, I thrive on solving complex challenges and building impactful applications that enhance user experiences and efficiency.</p>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="skills-container">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming</li>
-                <li>Gaming</li>
-                <li>Full-Stack Development</li>
-            </ul>
+    <section id="tech-stack">
+        <h2><i class="fas fa-tools"></i> Tech Stack</h2>
+        <div class="tech-columns">
+            <div class="frontend">
+                <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
+                </ul>
+            </div>
+            <div class="backend">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Flask</li>
+                    <li>MongoDB</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="projects">
+        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
         <div class="projects-container">
-            <h2>Projects</h2>
             <div class="project">
                 <img src="project1.jpg" alt="Calculator Project">
-                <div class="project-details">
-                    <h3>Calculator Project</h3>
-                    <p>A simple calculator application built with HTML, CSS, and JavaScript.</p>
-                </div>
+                <h3>Calculator</h3>
+                <p>A simple calculator built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/Deepak-S-github/CODSOFT-TASK-3-CALCULATOR-PPROJECT" target="_blank"><i class="fab fa-github"></i> Repo</a>
             </div>
             <div class="project">
                 <img src="project2.jpg" alt="Landing Page Project">
-                <div class="project-details">
-                    <h3>Landing Page</h3>
-                    <p>A modern and responsive landing page designed for a website, built with HTML, CSS, and JavaScript.</p>
-                </div>
+                <h3>Landing Page</h3>
+                <p>A responsive landing page built with modern UI elements.</p>
+                <a href="https://github.com/Deepak-S-github/CODSOFT-TASK-2-LANDING-PAGE" target="_blank"><i class="fab fa-github"></i> Repo</a>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Landing Page Project">
+                <h3>hotel management</h3>
+                <p>a fully working hotel and restarant management website with mongo db and flask </p>
+                <a href="https://github.com/Deepak-S-github/hotel-management" target="_blank"><i class="fab fa-github"></i> Repo</a>
             </div>
         </div>
     </section>
 
     <section id="resume">
         <div class="resume-container">
-            <h2>Resume</h2>
-            <a href="resume.pdf" download>Download My Resume</a>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-container">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>Phone: +1234567890</p>
+            <h2><i class="fas fa-file-alt"></i> Resume</h2>
+            <a href="resume.pdf" download><i class="fas fa-download"></i> Download My Resume</a>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
-            <p>&copy; 2024 Deepak. All rights reserved.</p>
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <p>
+                <i class="fas fa-envelope"></i> 
+                <span id="email" onclick="copyEmail()">deepakofficail0103@gmail.com</span>
+            </p>
+            <p><i class="fas fa-phone"></i> Phone: 6369021716</p>
+    
+            <div class="social-links">
+                <a href="https://github.com/Deepak-S-github" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/deepak-saminathan/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/d.pak_07/" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+    
+            <p>&copy; 2024 Deepak S. All rights reserved.</p>
+            <div id="copy-notification">Copied!</div>
         </div>
     </footer>
+    
 </body>
 </html>
