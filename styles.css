@@ -313,3 +313,52 @@ footer {
     opacity: 0;
     transition: opacity 0.5s;
 }
+@media (max-width: 480px) {
+    .loading-text {
+        font-size: 2em; /* Smaller font */
+    }
+
+    .spinner {
+        width: 60px; 
+        height: 60px; 
+        border-width: 6px; /* Smaller border */
+    }
+}
+@media (max-width: 768px) {
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; /* Prevents breaking */
+    }
+}
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 2em; /* Reduce title size */
+    }
+
+    .header-container p {
+        font-size: 1.2em; /* Adjust subtitle size */
+    }
+}
+@media (max-width: 768px) {
+    .tech-columns {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
+
+    .projects-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .project {
+        width: 90%; /* Take most of the screen width */
+    }
+}
+section {
+    max-width: 100%;
+    padding: 40px 15px; /* Reduce padding for small screens */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}

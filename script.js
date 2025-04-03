@@ -82,4 +82,43 @@ function copyEmail() {
         }, 2000);
     });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    /** Hamburger Menu Toggle **/
+    const menuBtn = document.createElement("button");
+    menuBtn.className = "menu-btn";
+    menuBtn.innerHTML = "&#9776;";
+    document.body.appendChild(menuBtn);
+    
+    const navMenu = document.querySelector(".nav-menu");
+    menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+    });
+
+    /** Back-to-Top Button **/
+    const backToTop = document.createElement("button");
+    backToTop.className = "back-to-top";
+    backToTop.innerHTML = "⬆";
+    document.body.appendChild(backToTop);
+    
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    /** Detect Mobile & Adjust Effects **/
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        document.querySelectorAll(".project").forEach(project => {
+            project.addEventListener("click", () => {
+                project.classList.toggle("hovered");
+            });
+        });
+    }
+});
 
